@@ -3,6 +3,7 @@ const colors = ["red","yellow","green","blue","purple","orange"]
 
 const board = document.getElementById("gameBoard")
 
+
 let selectedCandy = null
 let score = 0
 
@@ -195,6 +196,33 @@ setTimeout(()=>{
 checkMatches()
 
 },200)
+
+}
+
+
+
+  document.getElementById("rewardBtn").onclick=function(){
+
+showRewardAd()
+
+}
+let moves=20
+
+function decreaseMove(){
+
+moves--
+
+if(moves<=0){
+
+alert("Game Over")
+
+}
+
+}
+
+function extraMoves(){
+
+moves+=5
 
 }
 
