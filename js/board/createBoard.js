@@ -19,6 +19,7 @@ for(let i=0;i<boardSize*boardSize;i++){
 let candy=document.createElement("div")
 
 candy.className="candy"
+  candy.draggable = true
 
 let randomColor=colors[Math.floor(Math.random()*colors.length)]
 
