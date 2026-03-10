@@ -29,17 +29,6 @@ gap:20px;
 display:none;
 }
 
-#soundBtn{
-position:fixed;
-top:10px;
-right:10px;
-background:#333;
-color:white;
-padding:8px 12px;
-border-radius:6px;
-cursor:pointer;
-}
-
 /* ---------- TITLE ---------- */
 
 h1{
