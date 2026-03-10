@@ -64,7 +64,7 @@ selectedCandy=null
 function swapCandies(c1,c2){
 
 if(!isValidSwap(c1,c2)) return
-  playSwap()
+
 
 let temp=c1.style.background
 
@@ -159,7 +159,7 @@ function removeCandy(c1,c2,c3){
 c1.style.background="black"
 c2.style.background="black"
 c3.style.background="black"
-  playMatch()
+
 
 score+=10
 
