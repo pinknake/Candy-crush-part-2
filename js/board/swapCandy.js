@@ -21,11 +21,20 @@ selectedCandy=null
 })
 
 
-function swapCandies(c1,c2){
+function swap(c1,c2){
+
+if(!isValidSwap(c1,c2)){
+
+return
+
+}
 
 let temp=c1.style.background
+
 c1.style.background=c2.style.background
 c2.style.background=temp
+
+decreaseMove()
 
 setTimeout(()=>{
 
