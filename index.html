@@ -44,7 +44,9 @@
 
 <h2 id="levelTitle">Level 1</h2>
 
+
 <div id="topBar">
+  <div id="soundBtn">🔊</div>
 
 <div id="scoreBox">Score: <span id="scoreValue">0</span></div>
 
@@ -97,23 +99,6 @@ levelScreen.classList.remove("hidden")
 }
 
 
-  let soundOn=true
-
-document.getElementById("soundBtn").onclick=function(){
-
-soundOn=!soundOn
-
-if(soundOn){
-bgMusic.play()
-this.innerText="🔊"
-}else{
-bgMusic.pause()
-this.innerText="🔇"
-}
-
-}
-
-
 /* ---------- LEVEL SYSTEM ---------- */
 
 for(let i=1;i<=20;i++){
@@ -141,6 +126,21 @@ gameScreen.classList.remove("hidden")
 document.getElementById("levelTitle").innerText="Level "+level
 
 createBoard()
+
+}
+  let soundOn=true
+
+document.getElementById("soundBtn").onclick=function(){
+
+soundOn=!soundOn
+
+if(soundOn){
+bgMusic.play()
+this.innerText="🔊"
+}else{
+bgMusic.pause()
+this.innerText="🔇"
+}
 
 }
 
