@@ -1,0 +1,56 @@
+let selectedCandy = null;
+
+document.addEventListener("click", function(e){
+
+if(!e.target.classList.contains("candy")) return;
+
+if(selectedCandy === null){
+
+selectedCandy = e.target;
+selectedCandy.style.outline = "3px solid white";
+
+}else{
+
+// same candy click -> deselect
+if(selectedCandy === e.target){
+selectedCandy.style.outline = "none";
+selectedCandy = null;
+return;
+}
+
+// try swap
+swapCandies(selectedCandy, e.target);
+
+selectedCandy.style.outline = "none";
+selectedCandy = null;
+
+}
+
+});
+
+
+function swapCandies(c1, c2){
+
+// check valid swap
+if(!isValidSwap(c1,c2)){
+return;
+}
+
+let temp = c1.style.background;
+
+c1.style.background = c2.style.background;
+c2.style.background = temp;
+
+// moves reduce
+if(typeof decreaseMove === "function"){
+decreaseMove();
+}
+
+// check match
+setTimeout(function(){
+if(typeof checkMatches === "function"){
+checkMatches();
+}
+},100);
+
+}
