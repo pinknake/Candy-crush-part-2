@@ -51,6 +51,7 @@
 <div id="comboBox">Combo: <span id="comboValue">0</span></div>
 
 </div>
+  <div id="soundBtn">🔊</div>
 
 <div id="gameBoard"></div>
 
@@ -92,6 +93,23 @@ exitGame.onclick=()=>{
 
 gameScreen.classList.add("hidden")
 levelScreen.classList.remove("hidden")
+
+}
+
+
+  let soundOn=true
+
+document.getElementById("soundBtn").onclick=function(){
+
+soundOn=!soundOn
+
+if(soundOn){
+bgMusic.play()
+this.innerText="🔊"
+}else{
+bgMusic.pause()
+this.innerText="🔇"
+}
 
 }
 
