@@ -21,6 +21,7 @@ let candy=document.createElement("div")
 
 candy.className="candy"
 candy.draggable=true
+  candy.dataset.index = i
 
 let color=getRandomColor()
 
