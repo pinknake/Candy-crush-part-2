@@ -8,9 +8,7 @@
 
 <title>Candy Ultimate</title>
 
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/screens.css">
-<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -45,8 +43,8 @@
 <div id="gameScreen" class="screen hidden">
 
 <h2 id="levelTitle">Level 1</h2>
-  
-  <div id="topBar">
+
+<div id="topBar">
 
 <div id="scoreBox">Score: <span id="scoreValue">0</span></div>
 
@@ -54,26 +52,85 @@
 
 </div>
 
-
 <div id="gameBoard"></div>
 
 <button id="exitGame">Exit</button>
 
 </div>
-<script src="js/screens.js"></script>
-<script src="js/main.js"></script>
 
-<script src="js/board/createBoard.js"></script>
-<script src="js/board/swapCandy.js"></script>
-<script src="js/board/matchCheck.js"></script>
-<script src="js/board/gravity.js"></script>
-<script src="js/board/score.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
 <script>
-eruda.init();
+
+const startBtn=document.getElementById("startBtn")
+const backBtn=document.getElementById("backBtn")
+const exitGame=document.getElementById("exitGame")
+
+const startScreen=document.getElementById("startScreen")
+const levelScreen=document.getElementById("levelScreen")
+const gameScreen=document.getElementById("gameScreen")
+
+const levelContainer=document.getElementById("levelContainer")
+
+
+/* ---------- SCREEN SYSTEM ---------- */
+
+startBtn.onclick=()=>{
+
+startScreen.classList.add("hidden")
+levelScreen.classList.remove("hidden")
+
+}
+
+backBtn.onclick=()=>{
+
+levelScreen.classList.add("hidden")
+startScreen.classList.remove("hidden")
+
+}
+
+exitGame.onclick=()=>{
+
+gameScreen.classList.add("hidden")
+levelScreen.classList.remove("hidden")
+
+}
+
+
+/* ---------- LEVEL SYSTEM ---------- */
+
+for(let i=1;i<=20;i++){
+
+let level=document.createElement("div")
+
+level.className="levelBtn"
+level.innerText=i
+
+level.onclick=()=>{
+
+startGame(i)
+
+}
+
+levelContainer.appendChild(level)
+
+}
+
+function startGame(level){
+
+levelScreen.classList.add("hidden")
+gameScreen.classList.remove("hidden")
+
+document.getElementById("levelTitle").innerText="Level "+level
+
+createBoard()
+
+}
+
 </script>
-  
+
+
+<script src="game.js"></script>
+
 </body>
 
 </html>
