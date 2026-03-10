@@ -147,3 +147,25 @@ height:30px;
 }
 
 }
+
+#rewardBox{
+margin-top:15px;
+display:flex;
+justify-content:center;
+}
+
+#rewardBtn{
+background:#ffcc00;
+color:#000;
+padding:10px 18px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.2s;
+}
+
+#rewardBtn:hover{
+transform:scale(1.05);
+background:#ffd633;
+}
