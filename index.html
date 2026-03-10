@@ -16,25 +16,44 @@
 
 <body>
 
+<!-- START SCREEN -->
+
 <div id="startScreen" class="screen">
+
 <h1>🍬 Candy Ultimate</h1>
+
 <button id="startBtn">Start Game</button>
+
 </div>
 
+
+<!-- LEVEL SCREEN -->
+
 <div id="levelScreen" class="screen hidden">
+
 <h2>Select Level</h2>
+
 <div id="levelContainer"></div>
+
 <button id="backBtn">Back</button>
+
 </div>
+
+
+<!-- GAME SCREEN -->
 
 <div id="gameScreen" class="screen hidden">
 
 <h2 id="levelTitle">Level 1</h2>
+  
+  <div id="topBar">
 
-<div id="topBar">
 <div id="scoreBox">Score: <span id="scoreValue">0</span></div>
+
 <div id="comboBox">Combo: <span id="comboValue">0</span></div>
+
 </div>
+
 
 <div id="gameBoard"></div>
 
@@ -52,4 +71,5 @@
 <script src="js/board/score.js"></script>
 
 </body>
+
 </html>
