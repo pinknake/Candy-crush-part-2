@@ -201,15 +201,5 @@ checkMatches()
 
 /* ---------- START GAME ---------- */
 
-function startGame(level){
-
-playBG()
-
-levelScreen.classList.add("hidden")
-gameScreen.classList.remove("hidden")
-
-document.getElementById("levelTitle").innerText="Level "+level
-
 createBoard()
 
-}
