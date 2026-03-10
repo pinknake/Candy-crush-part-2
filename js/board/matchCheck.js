@@ -43,3 +43,25 @@ removeCandy(c1,c2,c3)
 }
 
 }
+
+function removeCandy(c1,c2,c3){
+
+playPopAnimation(c1)
+playPopAnimation(c2)
+playPopAnimation(c3)
+
+c1.style.background="black"
+c2.style.background="black"
+c3.style.background="black"
+
+updateScore(30)
+
+increaseCombo()
+
+setTimeout(()=>{
+
+applyGravity()
+
+},200)
+
+}
