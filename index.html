@@ -11,49 +11,32 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/screens.css">
 <link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/animation.css">
 
 </head>
 
 <body>
 
-<!-- START SCREEN -->
-
 <div id="startScreen" class="screen">
-
 <h1>🍬 Candy Ultimate</h1>
-
 <button id="startBtn">Start Game</button>
-
 </div>
-
-
-<!-- LEVEL SCREEN -->
 
 <div id="levelScreen" class="screen hidden">
-
 <h2>Select Level</h2>
-
 <div id="levelContainer"></div>
-
 <button id="backBtn">Back</button>
-
 </div>
-
-
-<!-- GAME SCREEN -->
 
 <div id="gameScreen" class="screen hidden">
 
 <h2 id="levelTitle">Level 1</h2>
-  
-  <div id="topBar">
 
+<div id="topBar">
 <div id="scoreBox">Score: <span id="scoreValue">0</span></div>
-
 <div id="comboBox">Combo: <span id="comboValue">0</span></div>
-
 </div>
-
 
 <div id="gameBoard"></div>
 
@@ -65,21 +48,19 @@
 <script src="js/main.js"></script>
 
 <script src="js/board/createBoard.js"></script>
+<script src="js/board/validateSwap.js"></script>
 <script src="js/board/swapCandy.js"></script>
 <script src="js/board/matchCheck.js"></script>
 <script src="js/board/gravity.js"></script>
-<script src="js/board/score.js"></script>
-
-
-<script src="js/board/validateSwap.js"></script>
 <script src="js/board/refillBoard.js"></script>
+
 <script src="js/engine/comboSystem.js"></script>
 <script src="js/engine/gameLoop.js"></script>
 
 <script src="js/ui/scoreUI.js"></script>
 <script src="js/ui/movesUI.js"></script>
+
 <script src="js/animation/candyAnimation.js"></script>
 
 </body>
-
 </html>
