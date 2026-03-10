@@ -1,0 +1,27 @@
+#topBar{
+
+position:absolute;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:30px;
+font-size:18px;
+
+}
+
+#scoreBox{
+
+background:#1e293b;
+padding:8px 16px;
+border-radius:8px;
+
+}
+
+#comboBox{
+
+background:#7c3aed;
+padding:8px 16px;
+border-radius:8px;
+
+}
