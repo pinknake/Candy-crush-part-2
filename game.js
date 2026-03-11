@@ -9,7 +9,6 @@ const board = document.getElementById("gameBoard")
 
 
 let selectedCandy = null
-let score = 0
 
 function randomColor(){
 return colors[Math.floor(Math.random()*colors.length)]
