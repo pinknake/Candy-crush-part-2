@@ -1,3 +1,7 @@
+let score = 0
+let targetScore = 500
+let currentLevel = 1
+
 const boardSize = 8
 const colors = ["red","yellow","green","blue","purple","orange"]
 
@@ -149,6 +153,10 @@ removeCandy(c1,c2,c3)
 }
 
 }
+   score += 50
+document.getElementById("score").innerText = score
+
+checkLevelComplete()
 
 }
 
@@ -223,6 +231,44 @@ alert("Game Over")
 function extraMoves(){
 
 moves+=5
+
+}
+
+function checkLevelComplete(){
+
+if(score >= targetScore){
+
+setTimeout(()=>{
+
+alert("🎉 Level "+currentLevel+" Complete!")
+
+showLevelComplete()
+
+},300)
+
+}
+
+}
+
+function showLevelComplete(){
+
+document.getElementById("gameScreen").classList.add("hidden")
+
+document.getElementById("levelCompleteScreen").classList.remove("hidden")
+
+}
+
+function nextLevel(){
+
+currentLevel++
+
+score = 0
+
+document.getElementById("score").innerText = 0
+
+document.getElementById("levelCompleteScreen").classList.add("hidden")
+
+startGame(currentLevel)
 
 }
 
