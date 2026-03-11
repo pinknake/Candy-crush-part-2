@@ -64,7 +64,9 @@ atOptions = {
 Level: <span id="levelTitle"></span>
 
 Score: <span id="score">0</span>
-
+  
+Moves: <span id="moves">20</span>
+  
 </div>
   
 
@@ -74,14 +76,29 @@ Score: <span id="score">0</span>
 <button id="rewardBtn">🎁 Watch Ad → Get +5 Moves</button>
 </div>
 
-<button id="exitGame">Exit</button>
+<button id="exitGame">Exist</button>
 
 </div>
+
+
   <div id="levelCompleteScreen" class="hidden">
 
-<h2>🎉 Level Complete</h2>
+<h2>Level Complete</h2>
+
+<div id="stars"></div>
 
 <button onclick="nextLevel()">Next Level</button>
+
+</div>
+  
+
+  <div id="gameOverScreen" class="hidden">
+
+<h2>Game Over</h2>
+
+<button onclick="restartLevel()">Retry</button>
+
+<button onclick="backToLevels()">Levels</button>
 
 </div>
 
