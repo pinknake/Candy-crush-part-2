@@ -57,14 +57,13 @@ atOptions = {
 
 </div>
 
-<h2 id="levelTitle">Level 1</h2>
 
 
 <div id="topBar">
 
-<div id="scoreBox">Score: <span id="scoreValue">0</span></div>
+Level: <span id="levelTitle"></span>
 
-<div id="comboBox">Combo: <span id="comboValue">0</span></div>
+Score: <span id="score">0</span>
 
 </div>
   
@@ -76,6 +75,13 @@ atOptions = {
 </div>
 
 <button id="exitGame">Exit</button>
+
+</div>
+  <div id="levelCompleteScreen" class="hidden">
+
+<h2>🎉 Level Complete</h2>
+
+<button onclick="nextLevel()">Next Level</button>
 
 </div>
 
